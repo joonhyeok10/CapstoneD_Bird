@@ -1,0 +1,11 @@
+python pickled package 에 대한 오류 (pickled package -> 리스타나 클래스 타입에 자료형을 파일에 쓰고 읽을수 있게해준다)
+파이썬 2.7 과 파이썬 3 호환문제
+with gzip.open('mnistx.pkl.gz', 'rb') as f:
+  l = list(pickle.load(f))
+파이썬 2.7 같은 경우는 오류가 나지 않지만 파이썬 3 버전에서는 오류 가발생
+pickle.load(file_obj, encoding = 'latin1')
+pickled 패키지를 이용해 파일을 불러줄때 인코딩을 정해주므로써 문제 해결
+
+Unicode Decode Error
+한글이 들어간 코딩일 경우 Decode 과정에서 오류 발생
+상단에 # -*- coding: utf-8 -*- 코드를 추가해주므로서 
