@@ -1,0 +1,15 @@
+model = tflearn.DNN(network, tensorboard_verbose=0, checkpoint_path='..\\Caps\\bird-classifier\\bird-classifierbird-classifier.tfl.ckpt')
+머신러닝 모델로는 DNN 모델사용
+DNN : 심층신경망으로 여러개의 은닉층을 가지고 있는 신경망이다
+
+model.fit(X, Y, n_epoch=100, shuffle=True, validation_set=(X_test, Y_test),
+#epoch = 100 학습데이터를 몇번 학습시킬것이가에 대해서 나타내는 수
+#shuffle : 데이터를 섞어주어 학습하는데있어 한쪽으로 치우쳐지지 않게해준다
+#validation_set : 학습한 데이터를 확인하는 데이터 셋으로 학습도를 더욱 높여준다
+          show_metric=True, batch_size=96,
+          #show_metric = True : 정확도를 표시하고
+          #batch_size = 96 : 데이터 배치 사이즈는 96으로 설정한다
+          snapshot_epoch=True,
+          #매 초가 끝날 때마다 모델을 스냅샷한다
+          run_id='bird-classifier')
+          
