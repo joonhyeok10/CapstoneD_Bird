@@ -2,7 +2,7 @@
 ### -> 피클의 load 내에서 open시 오류, 파이썬 2.x 버전에서는 가능한 것으로 추정됨.
 
 ### 임시로 data = open("..\\Caps\\full_dataset.pkl", "rb") 코드 실행, 정상 작동
-
+### data 변수를 따로 지정하여 데이터셋 열고, 피클 사용 시도.
 ### 위의 임시 코드 바로 밑에 X, Y, X_test, Y_test = pickle.load(data, encoding='latin1')로 바뀐 명령어 시도, 성공
 
 ### 최종 결과
