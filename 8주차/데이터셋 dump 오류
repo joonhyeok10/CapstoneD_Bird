@@ -1,0 +1,17 @@
+import zipfile as zf
+import pickle
+import os
+import os.path
+
+with open("..\\Caps\\dataset.zip", "r", encoding = 'latin1') as zf:
+    buffer = ""
+    while (1):
+        data = zf.read()
+        if data == "":
+            break
+        buffer += data
+        print("###SUCCESS TEST###")
+#obj = pickle.loads(buffer)
+
+#with open("..\\Caps\\dataset\\dataset.pkl", "wb") as ds:
+#    pickle.dump(obj, ds)
